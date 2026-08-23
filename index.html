@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shree Shyam PDF Editor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1>📄 Shree Shyam PDF Editor</h1>
+    <p>PDF खोलें और Text, Image, Highlight तथा Drawing करें</p>
+</header>
+
+<div class="toolbar">
+
+    <label class="tool-btn">
+        📂 PDF खोलें
+        <input type="file" id="pdfInput" accept="application/pdf">
+    </label>
+
+    <button id="addText">✏️ Text जोड़ें</button>
+
+    <label class="tool-btn">
+        🖼️ Image
+        <input type="file" id="imageInput" accept="image/*">
+    </label>
+
+    <button id="highlightBtn">🖍️ Highlight</button>
+
+    <button id="drawBtn">✏️ Draw</button>
+
+    <button id="deleteBtn">🗑️ Delete</button>
+
+    <button id="clearBtn">♻️ Clear</button>
+
+    <button id="saveBtn" class="save-btn">
+        💾 Save PDF
+    </button>
+
+</div>
+
+<div class="settings">
+
+    <label>
+        Font Size:
+        <input type="number" id="fontSize" value="22" min="8" max="100">
+    </label>
+
+    <label>
+        Text Color:
+        <input type="color" id="textColor" value="#000000">
+    </label>
+
+    <label>
+        Zoom:
+        <input
+            type="range"
+            id="zoom"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value="1"
+        >
+    </label>
+
+    <span id="zoomValue">100%</span>
+
+</div>
+
+<div id="message" class="message">
+    PDF खोलने के लिए ऊपर "📂 PDF खोलें" दबाएँ
+</div>
+
+<div id="pdfContainer"></div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
