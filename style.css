@@ -248,3 +248,59 @@ body {
         overflow-x: auto;
     }
 }
+.text-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    line-height: 1;
+    pointer-events: auto;
+    user-select: text;
+}
+
+.text-layer span {
+    position: absolute;
+    white-space: pre;
+    color: transparent;
+    cursor: text;
+    transform-origin: 0% 0%;
+}
+
+.text-layer span:hover {
+    background: rgba(37, 117, 252, 0.12);
+}
+
+.text-layer span.editing {
+    color: #111;
+    background: white;
+    outline: 2px solid #2575fc;
+    border-radius: 2px;
+    padding: 1px 2px;
+    cursor: text;
+    user-select: text;
+}
+
+.text-edit-box {
+    position: absolute;
+    z-index: 20;
+    min-width: 30px;
+    min-height: 20px;
+    padding: 2px 4px;
+    background: white;
+    border: 2px solid #2575fc;
+    outline: none;
+    font-family: Arial, sans-serif;
+    white-space: pre;
+}
+
+.text-layer-help {
+    position: absolute;
+    top: -28px;
+    left: 0;
+    z-index: 50;
+    padding: 5px 9px;
+    background: #2575fc;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+}
