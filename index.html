@@ -12,13 +12,15 @@
 <body>
 
 <header class="header">
-    <h1>📄 Shree Shyam PDF Editor</h1>
-    <p>PDF खोलें और Text, Image, Highlight तथा Drawing करें</p>
+    <div>
+        <h1>📄 Shree Shyam PDF Editor</h1>
+        <p>PDF खोलें और Text, Image, Highlight तथा Drawing करें</p>
+    </div>
 </header>
 
 <div class="toolbar">
 
-    <label class="tool-btn">
+    <label class="tool-btn primary">
         📂 PDF खोलें
         <input type="file" id="pdfInput" accept="application/pdf">
     </label>
@@ -47,17 +49,17 @@
 <div class="settings">
 
     <label>
-        Font Size:
+        Font Size
         <input type="number" id="fontSize" value="22" min="8" max="100">
     </label>
 
     <label>
-        Text Color:
+        Text Color
         <input type="color" id="textColor" value="#000000">
     </label>
 
-    <label>
-        Zoom:
+    <label class="zoom-control">
+        Zoom
         <input
             type="range"
             id="zoom"
@@ -73,7 +75,7 @@
 </div>
 
 <div id="message" class="message">
-    PDF खोलने के लिए ऊपर "📂 PDF खोलें" दबाएँ
+    📂 PDF खोलने के लिए ऊपर "PDF खोलें" दबाएँ
 </div>
 
 <div id="pdfContainer"></div>
